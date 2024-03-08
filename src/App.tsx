@@ -1,26 +1,47 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Navbar from './components/Navbar';
+import MyAvatar from './components/MyAvatar';
+import About from './components/About';
+import Skills from './components/Skills';
+import Works from './components/Works';
+import Contact from './components/Contact';
+import ScrollUp from './utils/ScrollUp';
+import { Box } from '@mui/material';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <section>
+        <Navbar />
+      </section>
+      <Box mb={5}>
+        <section>
+          <MyAvatar />
+        </section>
+      </Box>
+      <Box mb={5}>
+        <section id="about">
+          <About />
+        </section>
+      </Box>
+      <Box mb={5}>
+        <section id="skills">
+          <Skills />
+        </section>
+      </Box>
+      <Box mb={5}>
+        <section id="works">
+          <Works />
+        </section>
+      </Box>
+      <Box mb={5}>
+        <section id="contact">
+          <Contact />
+        </section>
+      </Box>
+      <ScrollUp />
+    </>
   );
-}
+};
 
 export default App;
