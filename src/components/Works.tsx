@@ -6,7 +6,6 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
-import Icon from '@mui/material/Icon';
 import styled from '@mui/material/styles/styled';
 import WorkDetail from './WorkDetail';
 import notionBotImageFile from '../static/images/notion_master_bot_icon.jpg';
