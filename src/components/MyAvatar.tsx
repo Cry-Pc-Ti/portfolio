@@ -5,7 +5,7 @@ import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
 
 // 画像ファイルをインポート
-import ImageFile from '../static/images/my_avatar.jpg';
+import ImageFile from '../static/images/my_avatar.png';
 
 // スタイルを定義
 const LargeAvatar = styled(Avatar)(({ theme }) => ({
@@ -23,7 +23,7 @@ const MyAvatar: React.FC = () => {
         <Typography variant="h5">TAITO IMURA</Typography>
       </Box>
       <Box display="flex" justifyContent="center" p={1}>
-        <Typography variant="body1">Web Enginner</Typography>
+        <Typography variant="body1">Enginner</Typography>
       </Box>
     </Box>
   );

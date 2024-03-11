@@ -3,11 +3,10 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 import MailIcon from '@mui/icons-material/Mail';
-import TwitterIcon from '@mui/icons-material/Twitter';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import Avatar from '@mui/material/Avatar';
 import { styled } from '@mui/system';
-import { green, blue, purple } from '@mui/material/colors';
+import { green, purple } from '@mui/material/colors';
 
 const StyledAvatar = styled(Avatar)(({ theme }) => ({
   margin: theme.spacing(1),
@@ -24,11 +23,6 @@ const Contact: React.FC = () => {
           <Link href="#" color="inherit">
             <StyledAvatar sx={{ bgcolor: green[500] }}>
               <MailIcon />
-            </StyledAvatar>
-          </Link>
-          <Link href="#" color="inherit">
-            <StyledAvatar sx={{ bgcolor: blue[500] }}>
-              <TwitterIcon />
             </StyledAvatar>
           </Link>
           <Link href="#" color="inherit">

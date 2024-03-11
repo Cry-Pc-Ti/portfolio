@@ -10,12 +10,12 @@ const About: React.FC = () => {
           <Typography variant="h5">About</Typography>
         </Box>
         <Box display="flex" justifyContent="center" p={1}>
-          <Typography variant="body1" textAlign="left">
-            テキスト
+          <Typography variant="body1" textAlign="center">
+            1999年生まれ 奈良県在住
             <br />
-            テキスト
+            1年半、東京のIT企業にて勤務
             <br />
-            テキスト
+            半年間、訓練校にてプログラミングを学習
           </Typography>
         </Box>
       </Box>
