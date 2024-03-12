@@ -17,7 +17,9 @@ const Contact: React.FC = () => {
     <>
       <Box p={2}>
         <Box display="flex" justifyContent="center" p={1}>
-          <Typography variant="h5">Contact</Typography>
+          <Typography variant="h5" style={{ fontFamily: 'Arial', fontWeight: 'bold' }}>
+            Contact
+          </Typography>
         </Box>
         <Box display="flex" justifyContent="center" p={1}>
           <Link href="#" color="inherit">

@@ -17,10 +17,12 @@ const MyAvatar: React.FC = () => {
   return (
     <Box p={2}>
       <Box display="flex" justifyContent="center" p={1}>
-        <LargeAvatar alt="Taito Imura" src={ImageFile} />
+        <LargeAvatar src={ImageFile} />
       </Box>
       <Box display="flex" justifyContent="center" p={1}>
-        <Typography variant="h5">TAITO IMURA</Typography>
+        <Typography variant="h5" style={{ fontFamily: 'Arial', fontWeight: 'bold' }}>
+          TAITO IMURA
+        </Typography>
       </Box>
       <Box display="flex" justifyContent="center" p={1}>
         <Typography variant="body1">Enginner</Typography>

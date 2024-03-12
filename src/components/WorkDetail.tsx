@@ -9,10 +9,9 @@ interface WorkDetailProps {
   open: boolean;
   onClose: () => void;
   title: string;
-  description: string;
 }
 
-const WorkDetail: React.FC<WorkDetailProps> = ({ open, onClose, title, description }) => {
+const WorkDetail: React.FC<WorkDetailProps> = ({ open, onClose, title }) => {
   return (
     <Dialog
       open={open}
@@ -27,7 +26,7 @@ const WorkDetail: React.FC<WorkDetailProps> = ({ open, onClose, title, descripti
           <CloseIcon />
         </IconButton>
       </DialogTitle>
-      <DialogContent>{description}</DialogContent>
+      <DialogContent>{/* 詳細ページの内容はここに追加 */}</DialogContent>
     </Dialog>
   );
 };
