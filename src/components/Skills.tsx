@@ -25,15 +25,15 @@ const SkillItem: React.FC<SkillItemProps> = ({ label, icon, rating, comment }) =
   return (
     <Card sx={{ width: isSmallScreen ? '88vw' : 'auto', maxWidth: '100%' }}>
       <CardContent>
-        <Box display="flex" alignItems="flex-end" margin={1}>
-          <Box display="inline" alignItems="center" marginRight={5}>
+        <Box display="flex" alignItems="center" m={1}>
+          <Box display="inline" pr={5}>
             <Box display="flex" alignItems="center">
               <img src={icon} alt={label} style={{ width: 30, height: 30 }} />
-              <Typography variant="body1" fontWeight="fontWeightBold" marginLeft={1}>
+              <Typography variant="body1" fontWeight="fontWeightBold" pl={1}>
                 {label}
               </Typography>
             </Box>
-            <Box display="flex" marginTop={1}>
+            <Box display="flex" pt={1}>
               {stars}
             </Box>
           </Box>
