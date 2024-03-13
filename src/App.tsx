@@ -22,27 +22,27 @@ const App: React.FC = () => {
           <section>
             <Navbar />
           </section>
-          <Box mb={5}>
+          <Box pb={7}>
             <section>
               <MyAvatar />
             </section>
           </Box>
-          <Box mb={5}>
+          <Box pb={7}>
             <section id="about">
               <About />
             </section>
           </Box>
-          <Box mb={5}>
+          <Box pb={7}>
             <section id="skills">
               <Skills />
             </section>
           </Box>
-          <Box mb={5}>
+          <Box pb={7}>
             <section id="works">
               <Works />
             </section>
           </Box>
-          <Box mb={5}>
+          <Box pb={7}>
             <section id="contact">
               <Contact />
             </section>

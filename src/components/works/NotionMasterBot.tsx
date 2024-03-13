@@ -15,7 +15,7 @@ const NotionMasterBotDetail: React.FC = () => {
         <Typography variant="h6">開発背景</Typography>
         <Typography variant="body1">
           {
-            ' このサービスは、xxxの問題に対処するために開発されました。xxxを改善するために、xxxを提供する必要がありました。 '
+            'このサービスは、xxxの問題に対処するために開発されました。xxxを改善するために、xxxを提供する必要がありました。 '
           }
         </Typography>
       </Box>

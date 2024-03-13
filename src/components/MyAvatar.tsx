@@ -15,19 +15,21 @@ const LargeAvatar = styled(Avatar)(({ theme }) => ({
 
 const MyAvatar: React.FC = () => {
   return (
-    <Box p={2}>
-      <Box display="flex" justifyContent="center" p={1}>
-        <LargeAvatar src={ImageFile} />
+    <>
+      <Box>
+        <Box display="flex" justifyContent="center" pt={2} pb={2}>
+          <LargeAvatar src={ImageFile} />
+        </Box>
+        <Box display="flex" justifyContent="center" pb={1}>
+          <Typography variant="h5" style={{ fontWeight: 'bold' }}>
+            TAITO IMURA
+          </Typography>
+        </Box>
+        <Box display="flex" justifyContent="center" p={1}>
+          <Typography variant="body1">Enginner</Typography>
+        </Box>
       </Box>
-      <Box display="flex" justifyContent="center" p={1}>
-        <Typography variant="h5" style={{ fontWeight: 'bold' }}>
-          TAITO IMURA
-        </Typography>
-      </Box>
-      <Box display="flex" justifyContent="center" p={1}>
-        <Typography variant="body1">Enginner</Typography>
-      </Box>
-    </Box>
+    </>
   );
 };
 

@@ -3,10 +3,9 @@ import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
-import { styled } from '@mui/system';
 import StarIcon from '@mui/icons-material/Star';
 import { Grid, useMediaQuery, useTheme } from '@mui/material';
-import { languageData } from '../utils/languageData';
+import { languageData } from '../static/languageData';
 
 interface SkillItemProps {
   label: string;
@@ -24,9 +23,9 @@ const SkillItem: React.FC<SkillItemProps> = ({ label, icon, rating, comment }) =
   ));
 
   return (
-    <Card sx={{ width: isSmallScreen ? '88vw' : 680 }}>
+    <Card sx={{ width: isSmallScreen ? '88vw' : 'auto', maxWidth: '100%' }}>
       <CardContent>
-        <Box display="flex" alignItems="flex-end" marginLeft={2}>
+        <Box display="flex" alignItems="flex-end" margin={1}>
           <Box display="inline" alignItems="center" marginRight={5}>
             <Box display="flex" alignItems="center">
               <img src={icon} alt={label} style={{ width: 30, height: 30 }} />
@@ -70,12 +69,6 @@ const Skills: React.FC = () => {
       comment: '独学で習得し、個人開発で使用\n基本的なことは理解しているが、実務経験はなし',
     },
     {
-      label: 'Node.js',
-      icon: languageData.find((l) => l.name === 'Node.js')?.icon ?? '',
-      rating: 3,
-      comment: '独学で習得し、個人開発で使用\n基本的なことは理解しているが、実務経験はなし',
-    },
-    {
       label: 'Python',
       icon: languageData.find((l) => l.name === 'Python')?.icon ?? '',
       rating: 3,
@@ -88,23 +81,35 @@ const Skills: React.FC = () => {
       comment: '本ポートフォリオサイトの作成にて学習・使用',
     },
     {
+      label: 'Node.js',
+      icon: languageData.find((l) => l.name === 'Node.js')?.icon ?? '',
+      rating: 3,
+      comment: '独学で習得し、個人開発で使用\n基本的なことは理解しているが、実務経験はなし',
+    },
+    {
       label: 'AWS',
       icon: languageData.find((l) => l.name === 'AWS')?.icon ?? '',
       rating: 1,
       comment: '独学で習得し、個人開発にてLightSailを使用',
+    },
+    {
+      label: 'GitHub',
+      icon: languageData.find((l) => l.name === 'GitHub')?.icon ?? '',
+      rating: 2,
+      comment: '個人開発で使用',
     },
   ];
 
   return (
     <>
       <Box p={2}>
-        <Box display="flex" justifyContent="center" p={2}>
+        <Box display="flex" justifyContent="center" pb={3}>
           <Typography variant="h5" style={{ fontWeight: 'bold' }}>
             Skills
           </Typography>
         </Box>
-        <Box display="flex" justifyContent="center" p={1}>
-          <Grid container spacing={2} justifyContent="flex-start" style={{ maxWidth: '1240px' }}>
+        <Box display="flex" justifyContent="center">
+          <Grid container spacing={2} justifyContent="flex-start" style={{ maxWidth: '1080px' }}>
             {skills.map((skill, index) => (
               <Grid item key={index} sm={12} lg={6}>
                 <SkillItem

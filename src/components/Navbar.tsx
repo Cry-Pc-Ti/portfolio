@@ -4,8 +4,6 @@ import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
 import { styled } from '@mui/system';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
-import { IconButton } from '@mui/material';
-import menuIcon from '../static/images/main_icon.png';
 
 const StyledButton = styled(Button)(() => ({
   textDecoration: 'none',
@@ -19,14 +17,6 @@ const Navbar: React.FC = () => {
   return (
     <AppBar color="transparent" position="static">
       <Toolbar>
-        <IconButton
-          edge="start"
-          color="inherit"
-          aria-label="menu"
-          style={{ alignItems: 'flex-start' }}
-        >
-          <img src={menuIcon} alt="Menu Icon" style={{ width: '32px', height: '32px' }} />
-        </IconButton>
         <div style={{ marginLeft: 'auto' }}>
           <AnchorLink href="#about" style={{ textDecoration: 'none', color: 'inherit' }}>
             <StyledButton>ABOUT</StyledButton>
