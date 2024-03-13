@@ -20,7 +20,7 @@ const MyAvatar: React.FC = () => {
         <LargeAvatar src={ImageFile} />
       </Box>
       <Box display="flex" justifyContent="center" p={1}>
-        <Typography variant="h5" style={{ fontFamily: 'Arial', fontWeight: 'bold' }}>
+        <Typography variant="h5" style={{ fontWeight: 'bold' }}>
           TAITO IMURA
         </Typography>
       </Box>

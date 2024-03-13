@@ -1,12 +1,12 @@
-import { Typography } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 
 const WingmanBotDetail: React.FC = () => {
   return (
-    <>
-      <Typography variant="h6">ウィングマンくん</Typography>
-      <Typography variant="body1">Valorant Random Picker</Typography>
-      {/* ここに詳細ページの内容を追加 */}
-    </>
+    <Box>
+      <Typography variant="body1" gutterBottom>
+        ウィングマンくんは、Valorantのカスタムマッチでの支援を行うDiscord Botです。
+      </Typography>
+    </Box>
   );
 };
 
