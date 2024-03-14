@@ -1,57 +1,63 @@
-import { Box, Divider, Typography } from '@mui/material';
+import { Box, Divider, ThemeProvider, Typography, createTheme } from '@mui/material';
 
 const PortfolioDetail: React.FC = () => {
+  const theme = createTheme({
+    components: {
+      MuiTypography: {
+        styleOverrides: {
+          subtitle1: {
+            fontWeight: 'bold',
+          },
+        },
+      },
+    },
+  });
+
   return (
-    <Box>
+    <ThemeProvider theme={theme}>
       <Box>
-        <Typography variant="h6">概要</Typography>
-        <Typography variant="body1">
+        <Typography variant="subtitle1">Overview</Typography>
+        <Typography variant="body2">
           {
             'このBotは、xxxするためのプラットフォームです。ユーザーはxxxを行い、xxxを管理することができます。'
           }
         </Typography>
       </Box>
       <Box mt={3}>
-        <Typography variant="h6">開発背景</Typography>
-        <Typography variant="body1">
+        <Typography variant="subtitle1">Background</Typography>
+        <Typography variant="body2">
           {
             'このサービスは、xxxの問題に対処するために開発されました。xxxを改善するために、xxxを提供する必要がありました。 '
           }
         </Typography>
       </Box>
       <Box mt={3}>
-        <Typography variant="h6">画面や機能の説明</Typography>
-        <Typography variant="body1">
+        <Typography variant="subtitle1">Description</Typography>
+        <Typography variant="body2">
           {
             'このサービスには、xxx画面とxxx機能があります。ユーザーはxxxを行うためにxxxを使用することができます。'
           }
         </Typography>
       </Box>
       <Box mt={3}>
-        <Typography variant="h6">主な使用技術</Typography>
-        <Typography variant="body1">{'TypeScript, Node.js(Notion API, Discord.js)'}</Typography>
+        <Typography variant="subtitle1">Demo</Typography>
+        <Typography variant="body2">Demo</Typography>
       </Box>
       <Box mt={3}>
-        <Typography variant="h6">ER図</Typography>
-        <Typography variant="body1">{'ER図は以下の通りです。'}</Typography>
+        <Typography variant="subtitle1">Requirement</Typography>
+        <Typography variant="body2">{'TypeScript, Node.js(Notion API, Discord.js)'}</Typography>
       </Box>
+      <Divider sx={{ mt: '32px', mb: '8px' }} />
       <Box mt={3}>
-        <Typography variant="h6">今後の展望</Typography>
-        <Typography variant="body1">
-          {'このサービスの今後の展望は、xxxを実装し、xxxを拡張することです。'}
-        </Typography>
-      </Box>
-      <Divider sx={{ marginTop: '32px', marginBottom: '8px' }} />
-      <Box mt={3}>
-        <Typography variant="h6">Github</Typography>
-        <Typography variant="body1">
+        <Typography variant="subtitle1">Github</Typography>
+        <Typography variant="body2">
           {'プロジェクトのGithubリポジトリはこちら: '}
           <a href="https://github.com/your-username/your-repo">
             https://github.com/your-username/your-repo
           </a>
         </Typography>
       </Box>
-    </Box>
+    </ThemeProvider>
   );
 };
 

@@ -42,16 +42,16 @@ const WorkItem: React.FC<{
       >
         <CardContent>
           <Box display="flex" alignItems="center">
-            <Box marginRight={2}>
-              <img src={icon} style={{ width: 45, height: 45 }} alt={title} />
+            <Box display="flex">
+              <img src={icon} style={{ width: 30, height: 30 }} alt={title} />
             </Box>
-            <Box width={isSmallScreen ? '60%' : 'auto'}>
+            <Box pl={2} width={isSmallScreen ? '60%' : 'auto'}>
               <Typography variant="subtitle1" fontWeight="fontWeightBold">
                 {title}
               </Typography>
               <Typography variant="body2">{description}</Typography>
             </Box>
-            <Box display="flex-end" justifyContent="flex-end" marginTop="auto" marginLeft="auto">
+            <Box display="flex-end" justifyContent="flex-end" mt="auto" marginLeft="auto">
               {languages.map((language) => (
                 <LanguageIcon
                   src={languageData.find((l) => l.name === language)?.icon ?? ''}

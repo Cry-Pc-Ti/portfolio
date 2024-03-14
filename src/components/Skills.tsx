@@ -15,8 +15,7 @@ interface SkillItemProps {
 }
 
 const SkillItem: React.FC<SkillItemProps> = ({ label, icon, rating, comment }) => {
-  const theme = useTheme();
-  const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
+  const isSmallScreen = useMediaQuery(useTheme().breakpoints.down('sm'));
 
   const stars = Array.from({ length: 5 }, (_, index) => (
     <StarIcon key={index} color={index < rating ? 'primary' : 'disabled'} />
