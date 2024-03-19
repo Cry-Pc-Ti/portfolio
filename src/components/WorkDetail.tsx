@@ -4,7 +4,6 @@ import DialogTitle from '@mui/material/DialogTitle';
 import DialogContent from '@mui/material/DialogContent';
 import IconButton from '@mui/material/IconButton';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import TSIcon from '@mui/icons-material';
 import CloseIcon from '@mui/icons-material/Close';
 import { Box, Divider, Typography, useMediaQuery, useTheme } from '@mui/material';
 import NotionMasterBotDetail from './works/NotionMasterBot';
@@ -16,24 +15,27 @@ interface WorkDetailProps {
   onClose: () => void;
   title: string;
   description: string;
+  repositoryName: string;
   icon: string;
 }
 
-const WorkDetail: React.FC<WorkDetailProps> = ({ open, onClose, title, description, icon }) => {
+const WorkDetail: React.FC<WorkDetailProps> = ({
+  open,
+  onClose,
+  title,
+  description,
+  repositoryName,
+  icon,
+}) => {
   const isSmallScreen = useMediaQuery(useTheme().breakpoints.down('sm'));
-
-  let repositoryName = '';
 
   const renderDetailPage = () => {
     switch (title) {
       case 'Notion Master Bot':
-        repositoryName = 'notion-master-bot';
         return <NotionMasterBotDetail />;
       case 'ウィングマンくん':
-        repositoryName = 'valorant-picker-bot';
         return <WingmanBotDetail />;
       case 'Portfolio':
-        repositoryName = 'portfolio';
         return <PortfolioDetail />;
       default:
         return null;
@@ -45,25 +47,24 @@ const WorkDetail: React.FC<WorkDetailProps> = ({ open, onClose, title, descripti
   if (!isSmallScreen) {
     titleBar = (
       <>
-        <Box display="flex">
-          <img
-            src={icon}
-            alt={title}
-            style={{ marginRight: '10px', width: '30px', height: '30px' }}
-          />
-          <Box display="flex" alignItems="baseline">
-            <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
-              {title}
-              {repositoryName}
-            </Typography>
-            <Typography variant="subtitle2" paddingLeft={1} sx={{ fontWeight: 'lighter' }}>
-              {` - ${description}`}
-            </Typography>
+        <Box display="flex" alignItems="center" justifyContent="space-between">
+          <Box display="flex">
+            <img
+              src={icon}
+              alt={title}
+              style={{ marginRight: '10px', width: '30px', height: '30px' }}
+            />
+            <Box display="flex" alignItems="baseline" pr={2}>
+              <Typography variant="h6" sx={{ fontWeight: 'bold' }} mr={1}>
+                {title}
+              </Typography>
+              <Typography variant="subtitle2" paddingLeft={1} sx={{ fontWeight: 'lighter' }}>
+                {`- ${description}`}
+              </Typography>
+            </Box>
           </Box>
-        </Box>
-        <Box sx={{ display: 'flex', justifyContent: 'flex-end', mr: 5 }}>
           <IconButton
-            href={`https://github.com/Cry-Pc-Ti/`}
+            href={`https://github.com/Cry-Pc-Ti/${repositoryName}`}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub repository"
