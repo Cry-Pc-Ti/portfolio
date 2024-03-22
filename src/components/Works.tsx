@@ -101,7 +101,7 @@ const Works: React.FC = () => {
     },
     {
       title: 'Portfolio',
-      description: 'This portfolio site',
+      description: 'This Portfolio Site',
       repositoryName: 'portfolio',
       icon: portfolio_icon,
       languages: ['TypeScript', 'React'],

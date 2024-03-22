@@ -9,10 +9,10 @@ const Footer: React.FC = () => {
         <Typography variant="body2" align="center">
           © {new Date().getFullYear()} Taito Imura. All rights reserved.
         </Typography>
-        <Typography variant="body2" align="center" mt={1}>
-          Contact : red.snp.and@gmail.com
-        </Typography>
-        <Box display="flex" justifyContent="center" mt={1}>
+        <Box display="flex" alignContent="center" justifyContent="center" mt={1}>
+          <Typography variant="body2" align="center" mr={2}>
+            red.snp.and@gmail.com
+          </Typography>
           <Link href="https://github.com/Cry-Pc-Ti" target="_blank" rel="noopener noreferrer" color="inherit">
             <GitHubIcon sx={{ fontSize: 24, mr: 1 }} />
           </Link>

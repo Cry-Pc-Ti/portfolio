@@ -15,21 +15,23 @@ const StyledButton = styled(Button)(() => ({
 
 const Navbar: React.FC = () => {
   return (
-    <AppBar color="transparent" position="static">
-      <Toolbar>
-        <div style={{ marginLeft: 'auto' }}>
-          <AnchorLink href="#about" style={{ textDecoration: 'none', color: 'inherit' }}>
-            <StyledButton>ABOUT</StyledButton>
-          </AnchorLink>
-          <AnchorLink href="#skills" style={{ textDecoration: 'none', color: 'inherit' }}>
-            <StyledButton>SKILLS</StyledButton>
-          </AnchorLink>
-          <AnchorLink href="#works" style={{ textDecoration: 'none', color: 'inherit' }}>
-            <StyledButton>Works</StyledButton>
-          </AnchorLink>
-        </div>
-      </Toolbar>
-    </AppBar>
+    <>
+      <AppBar color="transparent" position="static">
+        <Toolbar>
+          <div style={{ marginLeft: 'auto' }}>
+            <AnchorLink href="#about" style={{ textDecoration: 'none', color: 'inherit' }}>
+              <StyledButton>ABOUT</StyledButton>
+            </AnchorLink>
+            <AnchorLink href="#skills" style={{ textDecoration: 'none', color: 'inherit' }}>
+              <StyledButton>SKILLS</StyledButton>
+            </AnchorLink>
+            <AnchorLink href="#works" style={{ textDecoration: 'none', color: 'inherit' }}>
+              <StyledButton>Works</StyledButton>
+            </AnchorLink>
+          </div>
+        </Toolbar>
+      </AppBar>
+    </>
   )
 }
 

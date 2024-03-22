@@ -82,39 +82,41 @@ const WorkDetail: React.FC<WorkDetailProps> = ({ open, onClose, title, descripti
   }
 
   return (
-    <Dialog
-      open={open}
-      onClose={onClose}
-      fullWidth
-      maxWidth="lg"
-      sx={{
-        '& .MuiDialog-paper': isSmallScreen ? { width: '100%', height: '100%' } : { width: '85%', height: '85%' },
-      }}
-    >
-      <DialogTitle>
-        <Box display="flex" alignItems="center">
-          <IconButton aria-label="close" onClick={onClose} sx={{ position: 'absolute', right: '30px', top: '10px' }}>
-            <CloseIcon />
-          </IconButton>
-        </Box>
-      </DialogTitle>
-      <DialogContent>
-        <Box display="flex" alignItems="center" justifyContent="space-between" mb={1}>
-          {titleBar}
-        </Box>
-        <Divider sx={{ mt: isSmallScreen ? 1 : 2, mb: isSmallScreen ? 1 : 2 }} />
-        <Box
-          sx={{
-            mt: isSmallScreen ? 2 : 3,
-            ml: isSmallScreen ? 0 : 15,
-            mr: isSmallScreen ? 0 : 15,
-            mb: isSmallScreen ? 2 : 3,
-          }}
-        >
-          {renderDetailPage()}
-        </Box>
-      </DialogContent>
-    </Dialog>
+    <>
+      <Dialog
+        open={open}
+        onClose={onClose}
+        fullWidth
+        maxWidth="lg"
+        sx={{
+          '& .MuiDialog-paper': isSmallScreen ? { width: '100%', height: '100%' } : { width: '85%', height: '85%' },
+        }}
+      >
+        <DialogTitle>
+          <Box display="flex" alignItems="center">
+            <IconButton aria-label="close" onClick={onClose} sx={{ position: 'absolute', right: '30px', top: '10px' }}>
+              <CloseIcon />
+            </IconButton>
+          </Box>
+        </DialogTitle>
+        <DialogContent>
+          <Box display="flex" alignItems="center" justifyContent="space-between" mb={1}>
+            {titleBar}
+          </Box>
+          <Divider sx={{ mt: isSmallScreen ? 1 : 2, mb: isSmallScreen ? 1 : 2 }} />
+          <Box
+            sx={{
+              mt: isSmallScreen ? 2 : 3,
+              ml: isSmallScreen ? 0 : 15,
+              mr: isSmallScreen ? 0 : 15,
+              mb: isSmallScreen ? 2 : 3,
+            }}
+          >
+            {renderDetailPage()}
+          </Box>
+        </DialogContent>
+      </Dialog>
+    </>
   )
 }
 
