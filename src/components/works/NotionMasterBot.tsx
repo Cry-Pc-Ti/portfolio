@@ -1,5 +1,6 @@
-import { ThemeProvider } from '@emotion/react';
-import { Box, Divider, Typography, createTheme } from '@mui/material';
+import React from 'react'
+import { ThemeProvider } from '@emotion/react'
+import { Box, Typography, createTheme } from '@mui/material'
 
 const NotionMasterBotDetail: React.FC = () => {
   const theme = createTheme({
@@ -9,21 +10,27 @@ const NotionMasterBotDetail: React.FC = () => {
           subtitle1: {
             fontWeight: 'bold',
           },
+          body2: {
+            ml: 1,
+          },
         },
       },
     },
-  });
+  })
 
-  return (
-    <ThemeProvider theme={theme}>
+  const OverviewSection: React.FC = () => {
+    return (
       <Box>
         <Typography variant="subtitle1">Overview</Typography>
         <Typography variant="body2">
-          {
-            'このBotは、xxxするためのプラットフォームです。ユーザーはxxxを行い、xxxを管理することができます。'
-          }
+          {'このBotは、xxxするためのプラットフォームです。ユーザーはxxxを行い、xxxを管理することができます。'}
         </Typography>
       </Box>
+    )
+  }
+
+  const BackgroundSection: React.FC = () => {
+    return (
       <Box mt={3}>
         <Typography variant="subtitle1">Background</Typography>
         <Typography variant="body2">
@@ -32,34 +39,49 @@ const NotionMasterBotDetail: React.FC = () => {
           }
         </Typography>
       </Box>
+    )
+  }
+
+  const DescriptionSection: React.FC = () => {
+    return (
       <Box mt={3}>
         <Typography variant="subtitle1">Description</Typography>
         <Typography variant="body2">
-          {
-            'このサービスには、xxx画面とxxx機能があります。ユーザーはxxxを行うためにxxxを使用することができます。'
-          }
+          {'このサービスには、xxx画面とxxx機能があります。ユーザーはxxxを行うためにxxxを使用することができます。'}
         </Typography>
       </Box>
+    )
+  }
+
+  const DemoSection: React.FC = () => {
+    return (
       <Box mt={3}>
         <Typography variant="subtitle1">Demo</Typography>
         <Typography variant="body2">Demo</Typography>
       </Box>
+    )
+  }
+
+  const RequirementSection: React.FC = () => {
+    return (
       <Box mt={3}>
         <Typography variant="subtitle1">Requirement</Typography>
         <Typography variant="body2">{'TypeScript, Node.js(Notion API, Discord.js)'}</Typography>
       </Box>
-      <Divider sx={{ mt: '32px', mb: '8px' }} />
-      <Box mt={3}>
-        <Typography variant="subtitle1">Github</Typography>
-        <Typography variant="body2">
-          {'プロジェクトのGithubリポジトリはこちら: '}
-          <a href="https://github.com/your-username/your-repo">
-            https://github.com/your-username/your-repo
-          </a>
-        </Typography>
-      </Box>
-    </ThemeProvider>
-  );
-};
+    )
+  }
 
-export default NotionMasterBotDetail;
+  return (
+    <>
+      <ThemeProvider theme={theme}>
+        <OverviewSection />
+        <BackgroundSection />
+        <DescriptionSection />
+        <DemoSection />
+        <RequirementSection />
+      </ThemeProvider>
+    </>
+  )
+}
+
+export default NotionMasterBotDetail

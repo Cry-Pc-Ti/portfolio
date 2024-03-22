@@ -1,11 +1,11 @@
-import aws_icon from '../static/images/language_icon/aws_icon.png';
-import github_icon from '../static/images/language_icon/github_icon.png';
-import java_icon from '../static/images/language_icon/java_icon.png';
-import js_icon from '../static/images/language_icon/js_icon.png';
-import nodejs_icon from '../static/images/language_icon/nodejs_icon.png';
-import python_icon from '../static/images/language_icon/python_icon.png';
-import react_icon from '../static/images/language_icon/react_icon.png';
-import ts_icon from '../static/images/language_icon/ts_icon.png';
+import aws_icon from '../static/images/language_icon/aws_icon.png'
+import github_icon from '../static/images/language_icon/github_icon.png'
+import java_icon from '../static/images/language_icon/java_icon.png'
+import js_icon from '../static/images/language_icon/js_icon.png'
+import nodejs_icon from '../static/images/language_icon/nodejs_icon.png'
+import python_icon from '../static/images/language_icon/python_icon.png'
+import react_icon from '../static/images/language_icon/react_icon.png'
+import ts_icon from '../static/images/language_icon/ts_icon.png'
 
 export const languageData = [
   {
@@ -40,4 +40,4 @@ export const languageData = [
     name: 'TypeScript',
     icon: ts_icon,
   },
-];
+]

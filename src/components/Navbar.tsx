@@ -1,9 +1,9 @@
-import React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
-import Button from '@mui/material/Button';
-import { styled } from '@mui/system';
-import AnchorLink from 'react-anchor-link-smooth-scroll';
+import React from 'react'
+import AppBar from '@mui/material/AppBar'
+import Toolbar from '@mui/material/Toolbar'
+import Button from '@mui/material/Button'
+import { styled } from '@mui/system'
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 const StyledButton = styled(Button)(() => ({
   textDecoration: 'none',
@@ -11,7 +11,7 @@ const StyledButton = styled(Button)(() => ({
   '&:hover': {
     textDecoration: 'underline',
   },
-}));
+}))
 
 const Navbar: React.FC = () => {
   return (
@@ -27,13 +27,10 @@ const Navbar: React.FC = () => {
           <AnchorLink href="#works" style={{ textDecoration: 'none', color: 'inherit' }}>
             <StyledButton>Works</StyledButton>
           </AnchorLink>
-          <AnchorLink href="#contact" style={{ textDecoration: 'none', color: 'inherit' }}>
-            <StyledButton>CONTACT</StyledButton>
-          </AnchorLink>
         </div>
       </Toolbar>
     </AppBar>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar

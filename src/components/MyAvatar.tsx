@@ -1,22 +1,22 @@
-import React from 'react';
-import { styled } from '@mui/material/styles';
-import Box from '@mui/material/Box';
-import Avatar from '@mui/material/Avatar';
-import Typography from '@mui/material/Typography';
+import React from 'react'
+import { styled } from '@mui/material/styles'
+import Box from '@mui/material/Box'
+import Avatar from '@mui/material/Avatar'
+import Typography from '@mui/material/Typography'
 
 // 画像ファイルをインポート
-import ImageFile from '../static/images/my_avatar.png';
+import ImageFile from '../static/images/my_avatar.png'
 
 // スタイルを定義
 const LargeAvatar = styled(Avatar)(({ theme }) => ({
   width: theme.spacing(30),
   height: theme.spacing(30),
-}));
+}))
 
 const MyAvatar: React.FC = () => {
   return (
     <>
-      <Box>
+      <Box pb={7}>
         <Box display="flex" justifyContent="center" pt={2} pb={2}>
           <LargeAvatar src={ImageFile} />
         </Box>
@@ -30,7 +30,7 @@ const MyAvatar: React.FC = () => {
         </Box>
       </Box>
     </>
-  );
-};
+  )
+}
 
-export default MyAvatar;
+export default MyAvatar

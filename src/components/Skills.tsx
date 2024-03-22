@@ -1,25 +1,25 @@
-import React from 'react';
-import Box from '@mui/material/Box';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import Typography from '@mui/material/Typography';
-import StarIcon from '@mui/icons-material/Star';
-import { Grid, useMediaQuery, useTheme } from '@mui/material';
-import { languageData } from '../static/languageData';
+import React from 'react'
+import Box from '@mui/material/Box'
+import Card from '@mui/material/Card'
+import CardContent from '@mui/material/CardContent'
+import Typography from '@mui/material/Typography'
+import StarIcon from '@mui/icons-material/Star'
+import { Grid, useMediaQuery, useTheme } from '@mui/material'
+import { languageData } from '../static/languageData'
 
 interface SkillItemProps {
-  label: string;
-  icon: string;
-  rating: number;
-  comment: string;
+  label: string
+  icon: string
+  rating: number
+  comment: string
 }
 
 const SkillItem: React.FC<SkillItemProps> = ({ label, icon, rating, comment }) => {
-  const isSmallScreen = useMediaQuery(useTheme().breakpoints.down('sm'));
+  const isSmallScreen = useMediaQuery(useTheme().breakpoints.down('sm'))
 
   const stars = Array.from({ length: 5 }, (_, index) => (
     <StarIcon key={index} color={index < rating ? 'primary' : 'disabled'} />
-  ));
+  ))
 
   return (
     <Card sx={{ width: isSmallScreen ? '88vw' : 'auto', maxWidth: '100%' }}>
@@ -44,8 +44,8 @@ const SkillItem: React.FC<SkillItemProps> = ({ label, icon, rating, comment }) =
         </Box>
       </CardContent>
     </Card>
-  );
-};
+  )
+}
 
 const Skills: React.FC = () => {
   const skills = [
@@ -97,11 +97,11 @@ const Skills: React.FC = () => {
       rating: 2,
       comment: '個人開発で使用',
     },
-  ];
+  ]
 
   return (
     <>
-      <Box p={2}>
+      <Box p={2} pb={9}>
         <Box display="flex" justifyContent="center" pb={3}>
           <Typography variant="h5" style={{ fontWeight: 'bold' }}>
             Skills
@@ -111,19 +111,14 @@ const Skills: React.FC = () => {
           <Grid container spacing={2} justifyContent="flex-start" style={{ maxWidth: '1080px' }}>
             {skills.map((skill, index) => (
               <Grid item key={index} sm={12} lg={6}>
-                <SkillItem
-                  icon={skill.icon}
-                  label={skill.label}
-                  rating={skill.rating}
-                  comment={skill.comment}
-                />
+                <SkillItem icon={skill.icon} label={skill.label} rating={skill.rating} comment={skill.comment} />
               </Grid>
             ))}
           </Grid>
         </Box>
       </Box>
     </>
-  );
-};
+  )
+}
 
-export default Skills;
+export default Skills
