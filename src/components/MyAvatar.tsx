@@ -5,7 +5,7 @@ import Avatar from '@mui/material/Avatar'
 import Typography from '@mui/material/Typography'
 
 // 画像ファイルをインポート
-import ImageFile from '../static/images/my_avatar.png'
+import ImageFile from '../static/img/my_avatar.png'
 
 // スタイルを定義
 const LargeAvatar = styled(Avatar)(({ theme }) => ({

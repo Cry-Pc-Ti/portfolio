@@ -3,10 +3,8 @@ import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 import { Card, CardContent, Grid, styled, useMediaQuery, useTheme } from '@mui/material'
 import WorkDetail from './WorkDetail'
-import { languageData } from '../static/languageData'
-import notion_bot_icon from '../static/images/works_icon/notion_master_bot_icon.png'
-import valorant_bot_icon from '../static/images/works_icon/valorant_picker_bot_icon.png'
-import portfolio_icon from '../static/images/works_icon/portfolio_icon.png'
+import { languageData } from '../static/data/languageData'
+import { worksData } from '../static/data/worksData'
 
 const AnimatedCard = styled(Card)({
   transition: 'transform 0.3s ease-in-out',
@@ -84,30 +82,6 @@ const WorkItem: React.FC<{
 }
 
 const Works: React.FC = () => {
-  const works = [
-    {
-      title: 'Notion Master Bot',
-      description: 'Connect to Notion on Discord',
-      repositoryName: 'notion-master-bot',
-      icon: notion_bot_icon,
-      languages: ['TypeScript', 'Node.js'],
-    },
-    {
-      title: 'ウィングマンくん',
-      description: 'Valorant Bot for Custom Match',
-      repositoryName: 'valorant-picker-bot',
-      icon: valorant_bot_icon,
-      languages: ['TypeScript', 'Node.js'],
-    },
-    {
-      title: 'Portfolio',
-      description: 'This Portfolio Site',
-      repositoryName: 'portfolio',
-      icon: portfolio_icon,
-      languages: ['TypeScript', 'React'],
-    },
-  ]
-
   return (
     <>
       <Box p={2} pb={9}>
@@ -118,7 +92,7 @@ const Works: React.FC = () => {
         </Box>
         <Box display="flex" justifyContent="center">
           <Grid container spacing={2} justifyContent="flex-start" style={{ maxWidth: '1080px' }}>
-            {works.map((work, index) => (
+            {worksData.map((work, index) => (
               <Grid item key={index} xs={12} sm={6}>
                 <WorkItem
                   title={work.title}

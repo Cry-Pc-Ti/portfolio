@@ -5,7 +5,7 @@ import CardContent from '@mui/material/CardContent'
 import Typography from '@mui/material/Typography'
 import StarIcon from '@mui/icons-material/Star'
 import { Grid, useMediaQuery, useTheme } from '@mui/material'
-import { languageData } from '../static/languageData'
+import { languageData } from '../static/data/languageData'
 
 interface SkillItemProps {
   label: string

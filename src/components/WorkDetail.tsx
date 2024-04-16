@@ -7,7 +7,7 @@ import GitHubIcon from '@mui/icons-material/GitHub'
 import CloseIcon from '@mui/icons-material/Close'
 import { Box, Divider, Typography, useMediaQuery, useTheme } from '@mui/material'
 import NotionMasterBotDetail from './works/NotionMasterBot'
-import WingmanBotDetail from './works/WingmanBot'
+import WingmanBotDetail from './works/ValorantCustomBot'
 import PortfolioDetail from './works/Portfolio'
 
 interface WorkDetailProps {
