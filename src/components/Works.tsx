@@ -85,9 +85,14 @@ const Works: React.FC = () => {
   return (
     <>
       <Box p={2} pb={9}>
-        <Box display="flex" justifyContent="center" pb={3}>
+        <Box display="flex" justifyContent="center">
           <Typography variant="h5" style={{ fontWeight: 'bold' }}>
             Works
+          </Typography>
+        </Box>
+        <Box display="flex" justifyContent="center" pb={3}>
+          <Typography variant="body2" sx={{ fontWeight: 'lighter' }}>
+            Show Detail Page on Click
           </Typography>
         </Box>
         <Box display="flex" justifyContent="center">

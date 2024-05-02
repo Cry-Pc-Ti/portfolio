@@ -31,8 +31,8 @@ const App: React.FC = () => {
             <Works />
           </section>
           <Footer />
+          <ScrollUp />
         </Box>
-        <ScrollUp />
       </ThemeProvider>
     </>
   )

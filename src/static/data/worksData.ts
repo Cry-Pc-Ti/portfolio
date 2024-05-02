@@ -22,6 +22,6 @@ export const worksData = [
     description: 'This Portfolio Site',
     repositoryName: 'portfolio',
     icon: portfolio_icon,
-    languages: ['TypeScript', 'React', 'Node.js'],
+    languages: ['React', 'TypeScript', 'Node.js'],
   },
 ]
